@@ -52,7 +52,7 @@ def clean_string(text):
     text = str(text).lower().strip()
     return ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
 
-@st.cache_data(ttl=10)
+@st.cache_data(ttl=300)
 def load_faqs_tree():
     fallback_df = pd.DataFrame([
         {"category": "main", "question": "🍇 Search by Vineyard", "answer": "TREE_NODE"},
