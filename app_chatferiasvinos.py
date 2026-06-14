@@ -75,7 +75,7 @@ df_faqs = load_faqs_tree()
 # 3. Create/Render Chat History
 if "messages" not in st.session_state:
     st.session_state.messages = [
-        {"role": "assistant", "content": "👋 Estoy acá para ayudarte! Explora las opciones de abajo o hazme una pregunta directamente."}
+        {"role": "assistant", "content": "👋 Estoy acá para ayudarte! Explora los vinos presentes en Bocas Moradas o hazme una pregunta directamente."}
     ]
 
 if "waiting_for_email" not in st.session_state:
