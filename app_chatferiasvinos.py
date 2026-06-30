@@ -30,7 +30,7 @@ if "current_category" not in st.session_state:
     st.session_state.current_category = "main"
 
 # 1. Page Config
-st.set_page_config(page_title="Asistente Bocas Moradas", page_icon="🍷")
+st.set_page_config(page_title="Tu Asistente en Meet & Drink", page_icon="🍷")
 st.title("🤖 Hola Wine Lover! 🍷")
 
 # 2. Define URL and Load Data
@@ -41,7 +41,7 @@ def get_csv_url(url):
         match = re.search(r"/d/([a-zA-Z0-9-_]+)", url)
         if match:
             sheet_id = match.group(1)
-            return f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet=BocasMoradas"
+            return f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet=MeetDrink"
     except:
         pass
     return None
